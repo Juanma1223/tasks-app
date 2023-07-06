@@ -9,9 +9,11 @@ const ListsContainer = () => {
             name: "TO DO",
             tasks: [
                 {
+                    id: 1,
                     name: "Hacer el css"
                 },
                 {
+                    id: 2,
                     name: "Terminar los componentes"
                 }
             ]
@@ -20,6 +22,7 @@ const ListsContainer = () => {
             name: "In Progress",
             tasks: [
                 {
+                    id:3,
                     name: "Arrancar los componentes"
                 }
             ]

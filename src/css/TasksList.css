@@ -2,7 +2,17 @@
     margin: 10px;
     padding: 10px;
     height: 750px;
-    width: 25%;
+    width: 20%;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #CCD7E4;
+}
+
+
+.btn {
+    border: 0px;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    background-color: black;
+    color: #ccc;
 }
