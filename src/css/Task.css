@@ -1,6 +1,6 @@
 .task{
-    padding: 10px 20px;
-    margin: 10px 20px;
+    padding: 5px 10px;
+    margin: 5px 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 10px;
     background-color: #CEEAF7;
@@ -8,4 +8,5 @@
 
 .task:hover{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    background-color: #cedef7;
 }
