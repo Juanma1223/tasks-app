@@ -16,3 +16,12 @@
     background-color: black;
     color: #ccc;
 }
+
+.listNameInput {
+    font-size: 20px;
+    text-align: center; 
+    font-weight: bolder;
+    background-color: #CCD7E4;
+    border: solid black;
+    width: 150px;
+}

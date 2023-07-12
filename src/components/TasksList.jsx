@@ -4,6 +4,8 @@ import Task from './Task'
 
 const TasksList = ({ list, updateList }) => {
 
+    console.log("list",list)
+
     // States
     const [listTasks, setListTasks] = useState(list.tasks)
     const [editing, setEditing] = useState(false);
@@ -13,7 +15,7 @@ const TasksList = ({ list, updateList }) => {
     // Functions
     const addTask = () => {
         const newTask = {
-            id: listTasks[listTasks.length - 1],
+            id: listTasks.length+1,
             name: "Nueva tarea"
         }
         setListTasks(
@@ -32,18 +34,25 @@ const TasksList = ({ list, updateList }) => {
     }
 
     const editTask = (updatedTask) => {
-
+        console.log("updatedTask",updatedTask)
+        setListTasks(listTasks.map((task) => {
+            if(task.id === updatedTask.id){
+                return updatedTask
+            }else{
+                return task
+            }
+        }))
     }
 
     return (
         <div className='tasksList'>
             <h2 onClick={startEditing} onBlur={finishEditing}>
-                {editing ? <input type="text" value={listName} onChange={(e) => setListName(e.target.value)}></input> : list.name}
+                {editing ? <input className='listNameInput' type="text" value={listName} onChange={(e) => setListName(e.target.value)}></input> : list.name}
             </h2>
             <div>
                 {listTasks.map((task) => {
                     return (
-                        <Task task={task} />
+                        <Task editTask={editTask} task={task} />
                     )
                 })}
             </div>
