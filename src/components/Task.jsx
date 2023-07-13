@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../css/Task.css'
+import { FaTrashAlt } from 'react-icons/fa';
 
 const Task = ({ task, editTask }) => {
 
@@ -22,6 +23,7 @@ const Task = ({ task, editTask }) => {
     return (
         <div className='task' onClick={startEditing} onBlur={stopEditing}>
             {editing ? <input onBlur={updateTask} className='taskNameInput' value={taskName} onChange={(e) => setTaskName(e.target.value)}></input> : task.name}
+            <FaTrashAlt className='deleteButton' />
         </div>
     )
 }
